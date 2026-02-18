@@ -66,9 +66,12 @@ function HomeHero(): ReactNode {
           >
             Explore Best Practices
           </Link>
-          <Link className="button button--outline button--lg" to="/docs/intro">
+          <span
+            className="button button--outline button--lg"
+            aria-disabled="true"
+          >
             Start Documentation
-          </Link>
+          </span>
         </div>
       </div>
     </section>
