@@ -1,41 +1,104 @@
-# Website
+# My Docusaurus Site
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+A documentation website built with [Docusaurus](https://docusaurus.io/), a modern static website generator powered by React.
 
-## Installation
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) >= 20.0
+- [Yarn](https://yarnpkg.com/) package manager
+
+## Project Structure
+
+```
+my-docusaurus/
+├── blog/           # Blog posts
+├── docs/           # Documentation pages
+├── src/            # React components and pages
+│   ├── components/
+│   ├── css/
+│   └── pages/
+├── static/         # Static assets (images, etc.)
+├── docusaurus.config.ts  # Site configuration
+└── sidebars.ts     # Docs sidebar configuration
+```
+
+## Getting Started
+
+### Installation
+
+Install the project dependencies:
 
 ```bash
 yarn
 ```
 
-## Local Development
+### Local Development
+
+Start the local development server:
 
 ```bash
 yarn start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+This command starts a local development server and opens a browser window. Most changes are reflected live without having to restart the server.
 
-## Build
+### Build
+
+Generate a production-ready static build:
 
 ```bash
 yarn build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+Static content is output to the `build` directory and can be served by any static hosting service.
+
+### Serve Built Site Locally
+
+Preview the production build locally:
+
+```bash
+yarn serve
+```
+
+### Type Checking
+
+```bash
+yarn typecheck
+```
 
 ## Deployment
 
-Using SSH:
+### Using SSH
 
 ```bash
 USE_SSH=true yarn deploy
 ```
 
-Not using SSH:
+### Without SSH
 
 ```bash
 GIT_USER=<Your GitHub username> yarn deploy
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+The `deploy` command builds the website and pushes it to the `gh-pages` branch, making it available via GitHub Pages.
+
+## Configuration
+
+The main site configuration is in [`docusaurus.config.ts`](./docusaurus.config.ts). Key settings include:
+
+- **title**: Site title
+- **url**: Production URL of the site
+- **baseUrl**: Base URL path
+- **organizationName** / **projectName**: Used for GitHub Pages deployment
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/my-feature`)
+3. Commit your changes (`git commit -m 'Add my feature'`)
+4. Push to the branch (`git push origin feature/my-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is open source. See the repository for license details.
