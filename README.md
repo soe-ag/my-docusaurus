@@ -5,7 +5,7 @@ A documentation website built with [Docusaurus](https://docusaurus.io/), a moder
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) >= 20.0
-- [Yarn](https://yarnpkg.com/) package manager
+- [npm](https://www.npmjs.com/) package manager (included with Node.js)
 
 ## Project Structure
 
@@ -29,7 +29,7 @@ my-docusaurus/
 Install the project dependencies:
 
 ```bash
-yarn
+npm install
 ```
 
 ### Local Development
@@ -37,7 +37,7 @@ yarn
 Start the local development server:
 
 ```bash
-yarn start
+npm start
 ```
 
 This command starts a local development server and opens a browser window. Most changes are reflected live without having to restart the server.
@@ -47,7 +47,7 @@ This command starts a local development server and opens a browser window. Most 
 Generate a production-ready static build:
 
 ```bash
-yarn build
+npm run build
 ```
 
 Static content is output to the `build` directory and can be served by any static hosting service.
@@ -57,13 +57,13 @@ Static content is output to the `build` directory and can be served by any stati
 Preview the production build locally:
 
 ```bash
-yarn serve
+npm run serve
 ```
 
 ### Type Checking
 
 ```bash
-yarn typecheck
+npm run typecheck
 ```
 
 ## Deployment
@@ -71,13 +71,13 @@ yarn typecheck
 ### Using SSH
 
 ```bash
-USE_SSH=true yarn deploy
+USE_SSH=true npm run deploy
 ```
 
 ### Without SSH
 
 ```bash
-GIT_USER=<Your GitHub username> yarn deploy
+GIT_USER=<Your GitHub username> npm run deploy
 ```
 
 The `deploy` command builds the website and pushes it to the `gh-pages` branch, making it available via GitHub Pages.
